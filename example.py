@@ -26,7 +26,7 @@ x_train, x_test, y_train, y_test = train_test_split(irx, iry, test_size=0.2)
 
 # built model and train
 model = elm.elm(hidden_units=32, activation_function='relu', random_type='normal', x=x_train, y=y_train, C=0.1, elm_type='clf')
-beta, train_accuracy, running_time = model.fit('faster2')
+beta, train_accuracy, running_time = model.fit('solution2')
 print("classifier beta:\n", beta)
 print("classifier train accuracy:", train_accuracy)
 print('classifier running time:', running_time)
@@ -51,7 +51,7 @@ x_train, x_test, y_train, y_test = train_test_split(irx, iry, test_size=0.2)
 
 # build model and train
 model = elm.elm(hidden_units=32, activation_function='relu', random_type='normal', x=x_train, y=y_train, C=0.1, elm_type='clf')
-beta, train_accuracy, running_time = model.fit('faster2')
+beta, train_accuracy, running_time = model.fit('solution2')
 print("classifier beta:\n", beta)
 print("classifier train accuracy:", train_accuracy)
 print('classifier running time:', running_time)
