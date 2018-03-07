@@ -23,30 +23,30 @@ About ELM
 
 The structure of ELM is shown in following figure.
 
-![structure](https://github.com/5663015/elm/tree/master/picture/structure_of_ELM.jpg)
+![](https://github.com/5663015/elm/blob/master/picture/structure_of_ELM.jpg)
 
 ELM does not need BP algorithm to train the network. First, randomly initialize the input layer to the hidden layer weight, then directly calculate the hidden layer to the output layer weight matrix beta. 
 The output of ELM with L hidden nodes can be written as:
 
-![output](https://github.com/5663015/elm/tree/master/picture/output.jpg)
+![](https://github.com/5663015/elm/blob/master/picture/output.jpg)
 
 Only the weights between the hidden layer and the output, beta matrix, need to be deterimined. The aim is to minimize following formulation:
 
-![aim](https://github.com/5663015/elm/tree/master/picture/aim_function.jpg)
+![](https://github.com/5663015/elm/blob/master/picture/aim_function.jpg)
 
 If there is no regularization C, the solution of beta is:
 
-![no_re](https://github.com/5663015/elm/tree/master/picture/no_re.jpg)
+![](https://github.com/5663015/elm/blob/master/picture/no_re.jpg)
 
 If set regularization factor C, the solutions of beta are:
 
 * the number of training samples is not huge(solution 1):
 
-![solution1](https://github.com/5663015/elm/tree/master/picture/solution1.jpg)
+![](https://github.com/5663015/elm/blob/master/picture/solution1.jpg)
 
 * the number of training samples is huge(solution 2):
 
-![solution2](https://github.com/5663015/elm/tree/master/picture/solution2.jpg)
+![](https://github.com/5663015/elm/blob/master/picture/solution2.jpg)
 
 
 API
