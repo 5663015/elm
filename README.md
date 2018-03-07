@@ -1,4 +1,3 @@
-# elm
 Extreme Learning Machine(ELM): Python code
 ===
 
