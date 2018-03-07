@@ -40,8 +40,8 @@ class elm():
         self.x = x
         self.y = y
         self.C = C
-        self.class_num = np.unique(self.y).shape[0]     # 类别数目
-        self.beta = np.zeros((self.hidden_units, self.class_num))   # beta矩阵
+        self.class_num = np.unique(self.y).shape[0]     
+        self.beta = np.zeros((self.hidden_units, self.class_num))   
         self.elm_type = elm_type
         self.one_hot = one_hot
 
@@ -91,7 +91,7 @@ class elm():
     Function: Train the model, compute beta matrix, the weight matrix from hidden layer to output layer
     ------------------
     Parameter:
-    algorithm: str, 'no_re', 'faster1' or 'faster2'
+    algorithm: str, 'no_re', 'solution1' or 'solution2'
         The algorithm to compute beta matrix
     ------------------
     Return:
@@ -116,12 +116,12 @@ class elm():
         if algorithm == 'no_re':
             self.beta = np.dot(pinv2(self.H.T), self.y_temp)
         # faster algorithm 1
-        if algorithm == 'faster1':
+        if algorithm == 'solution1':
             self.tmp1 = inv(np.eye(self.H.shape[0])/self.C + np.dot(self.H, self.H.T))
             self.tmp2 = np.dot(self.tmp1, self.H)
             self.beta = np.dot(self.tmp2, self.y_temp)
         # faster algorithm 2
-        if algorithm == 'faster2':
+        if algorithm == 'solution2':
             self.tmp1 = inv(np.eye(self.H.shape[0])/self.C + np.dot(self.H, self.H.T))
             self.tmp2 = np.dot(self.H.T, self.tmp1)
             self.beta = np.dot(self.tmp2.T, self.y_temp)
@@ -172,6 +172,9 @@ class elm():
     Parameters:
     x: array, shape[samples, features]
     y: array, shape[samples, ]
+    -------------
+    Return:
+    test_score: float, accuracy or RMSE
     '''
     def score(self, x, y):
         self.prediction = self.predict(x)
