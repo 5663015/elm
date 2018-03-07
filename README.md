@@ -59,7 +59,7 @@ API
 * one_hot: bool, Ture or False, default True. The parameter is useful only when elm_type == 'clf'. If the labels need to transformed to one_hot, this parameter is set to be True.
 * random_type: str, 'uniform' or 'normal', default:'normal'. Weight initialization method
 
-#### elm.elm.fit(algorithm)
+`elm.elm.fit(algorithm)`
 
 Train the model, compute beta matrix, the weight matrix from hidden layer to output layer
 
@@ -70,7 +70,7 @@ Train the model, compute beta matrix, the weight matrix from hidden layer to out
   * train_score: float. The accuracy or RMSE
   * train_time: str. Time of computing beta
 
-#### elm.elm.predict(x)
+`elm.elm.predict(x)`
 
 Compute the result given data
 
@@ -79,7 +79,7 @@ Compute the result given data
 * Return:
   * y_: array. Predicted results
 
-#### elm.elm.score(x, y)
+`elm.elm.score(x, y)`
 
 Compute accuracy or RMSE given data and labels
 
