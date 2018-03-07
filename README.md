@@ -48,7 +48,7 @@ If set regularization factor C, the solutions of beta are:
 API
 ---
 
-#### class elm.elm(hidden_units, activation_function,  x, y, C, elm_type, one_hot=True, random_type='normal')
+`class elm.elm(hidden_units, activation_function,  x, y, C, elm_type, one_hot=True, random_type='normal')`
 
 * hidden_units: list, shape [hidden units, output units], numbers of hidden units and output units
 * activation_function: str, 'sigmoid', 'relu', 'sin', 'tanh' or 'leaky_relu'. Activation function of neurals
